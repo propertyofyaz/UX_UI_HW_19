@@ -50,6 +50,16 @@ margin: 0 0 0 2rem;
 cursor: pointer;
 }
 
+a {    
+    color: white;
+    text-decoration:none;
+}
+
+a:visted {
+    color:white;
+    text-decoration:none;
+}
+
 aside {
     float:left;
 }
