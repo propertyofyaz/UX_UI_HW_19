@@ -28,6 +28,7 @@
     width: 20%;
     padding: 1%;
     text-align: center;
+    cursor: pointer;
 }
 
 nav {
@@ -46,6 +47,7 @@ ul {
 
 li {
 margin: 0 0 0 2rem;
+cursor: pointer;
 }
 
 aside {
@@ -85,6 +87,11 @@ h3 {
     font-size: 1.5rem;
     letter-spacing: 4px;
 }
+
+h4 {
+    font-size: 1.4rem;
+    color:#2E6158;
+}
 .job {
     transform: translateX(220px) translateY(-120px);
 }
@@ -110,6 +117,7 @@ p {
     margin: 2rem;
     border-radius: 0px 80px 0px 0px;
     box-shadow: 3px 3px 20px 10px rgba(28,59,53,0.77);
+    cursor: pointer;
 }
 
 /* Footer */
@@ -160,3 +168,75 @@ section .tools {
     width: 100px;
     color:#2E6158;
 }
+
+@keyframes spin {
+from { transform: rotateY(0deg); }
+to { transform: rotateY(360deg); }
+}
+
+.logo {
+    animation: spin 4s infinite;
+}
+
+.project:hover
+{
+        -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        transform: scale(1.02);
+        box-shadow: 3px 3px 20px 10px #AED2CD;
+        transition: transform 0.20s ease-in-out;
+}
+
+.icon:hover {
+    filter: drop-shadow(1px 1px 26px #aed2cd);
+}
+
+:not(nav).inline-block {
+        display: inline-block;
+        position: relative;
+        color: white;
+      }
+
+:not(nav).inline-block:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        transform-origin: bottom right;
+        transition: transform 0.35s ease-out;
+      }
+
+:not(nav).inline-block:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+
+.inline-block-h3 {
+        display: inline-block;
+        position: relative;
+        color:#AED2CD;
+        cursor: pointer;
+      }
+
+.inline-block-h3:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        transform-origin: bottom right;
+        transition: transform 0.35s ease-out;
+      }
+
+.inline-block-h3:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
